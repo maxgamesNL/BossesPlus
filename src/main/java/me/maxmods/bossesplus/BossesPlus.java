@@ -1,19 +1,18 @@
 package me.maxmods.bossesplus;
 
+import me.maxmods.bossesplus.commands.God;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public final class BossesPlus extends JavaPlugin {
 
+
+    //this is how you comment
     @Override
     public void onEnable() {
-        // Plugin startup logic
+        getCommand("god").setExecutor(new God());
 
     }
 
-    @Override
-    public void onDisable() {
-        // Plugin shutdown logic
-    }
 }
 
 
