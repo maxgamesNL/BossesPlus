@@ -1,0 +1,6 @@
+name: BossesPlus
+version: ${project.version}
+main: me.maxmods.bossesplus.BossesPlus
+api-version: 1.17
+authors: [ maxMods, kinderbadje ]
+description: Extra bosses for minecraft
