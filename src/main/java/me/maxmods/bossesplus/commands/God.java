@@ -1,5 +1,6 @@
 package me.maxmods.bossesplus.commands;
 
+import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
@@ -18,13 +19,14 @@ public class God implements CommandExecutor {
             if (player.getAllowFlight() == false){
                 player.setInvulnerable(true);
                 player.setAllowFlight(true);
-                player.sendMessage("You are now in god mode! You are now able to beat god himself.");
+                player.sendMessage("You are now in " + ChatColor.RED + "GOD" + ChatColor.WHITE + " mode! You are now able to beat god himself.");
+                player.setHealth(20);
             }
 
             else if(player.getAllowFlight()){
                 player.setInvulnerable(false);
                 player.setAllowFlight(false);
-                player.sendMessage("You left god mode! You are now a normal person.");
+            player.sendMessage("You left " + ChatColor.RED + "GOD" + ChatColor.WHITE +" mode! You are now a normal person.");
             }
 
 
