@@ -14,8 +14,21 @@ public class God implements CommandExecutor {
         if (sender instanceof Player){
 
             Player player = (Player) sender;
-            player.setInvulnerable(true);
-            player.setAllowFlight(true);
+
+            if (player.getAllowFlight() == false){
+                player.setInvulnerable(true);
+                player.setAllowFlight(true);
+                player.sendMessage("You are now in god mode! You are now able to beat god himself.");
+            }
+
+            else if(player.getAllowFlight()){
+                player.setInvulnerable(false);
+                player.setAllowFlight(false);
+                player.sendMessage("You left god mode! You are now a normal person.");
+            }
+
+
+
         }
 
 
