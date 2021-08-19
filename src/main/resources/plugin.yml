@@ -7,3 +7,5 @@ description: Extra bosses for minecraft
 commands:
   god:
     description: Become god himself!!!
+  SpawnBosses:
+    description: Opens GUI with all the SpawnItems
